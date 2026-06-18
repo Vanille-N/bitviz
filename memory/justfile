@@ -1,0 +1,5 @@
+typstc cmd file fmt="pdf":
+  typst {{ cmd }} --root=.. --font-path=.. {{ file }} {{ replace(file, ".typ", "." + fmt) }}
+
+test: (typstc "watch" "test.typ")
+
